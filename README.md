@@ -1,3 +1,3 @@
 # dockerfiles
 
-dockerfile confiuration of different applications
+dockerfile confiuration for different applications
