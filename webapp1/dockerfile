@@ -6,13 +6,11 @@ FROM node:alpine
 
 WORKDIR /usr/app
 
-# Copying the application file to container 
+# Copying the application file to container and Installing dependencies
 
-COPY . .
-
-# Installing dependencies
-
+COPY ./package.json ./
 RUN npm install
+COPY ./index.js ./
 
 # Default command to execute
 
