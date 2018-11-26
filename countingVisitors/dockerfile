@@ -1,0 +1,19 @@
+# Using base image
+FROM node:alpine
+
+# variable to store current date and time
+ARG BUILD_DATE
+LABEL org.label-schema.build-date=$BUILD_DATE
+
+# current working directory
+WORKDIR '/app'
+
+# Copying the application file to container and Installing dependencies
+
+COPY ./package.json ./
+RUN npm install
+COPY . .
+
+# Default command to execute
+
+CMD ["npm" , "start"]
