@@ -1,0 +1,11 @@
+# Specify a base image
+
+FROM alpine
+
+# Installing dependencies
+
+RUN npm Install
+
+# Default command
+
+CMD ["npm" , "start"]
