@@ -2,7 +2,7 @@
 
 FROM node:alpine
 
-# variable to store current date and time
+# variable to store current date and time as a label
 ARG BUILD_DATE
 
 # Working directory 
@@ -27,4 +27,5 @@ CMD ["npm" , "start"]
        "org.label-schema.build-date"=$BUILD_DATE
 
  # RUn the below command it will add the label to image as current date and time 
- #$ docker build --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t imageName:tagName 
+ #$ docker build --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t imageName:tagName .
+ # docker build --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t samplewebapp . 
